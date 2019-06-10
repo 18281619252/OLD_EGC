@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/back"
+
+   >
+    <TextView
+        android:id="@+id/bluetooth_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="连接的蓝牙名字" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        >
+
+
+
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="237"
+            android:textSize="40sp"
+            android:gravity="center"
+            />
+
+        <com.example.blue.SpreadView
+            android:id="@+id/spreadView"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            app:spread_center_color="@color/colorAccent1"
+            app:spread_delay_milliseconds="35"
+            app:spread_distance="5"
+            app:spread_max_radius="10"
+            app:spread_radius="200"
+            app:spread_spread_color="@color/colorSpread" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <com.example.blue.Electrocardiogram
+
+            android:id="@+id/electrocardiogram"
+            android:layout_width="wrap_content"
+            android:layout_height="270dp"
+            android:layout_gravity="center" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123"
+                android:textSize="30sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/textmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最低"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/min"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/heart"
+                android:layout_toLeftOf="@+id/textmin"
+                android:layout_below="@+id/min"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="123"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textmax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最高"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/max"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/heart"
+                android:layout_toLeftOf="@+id/textmax"
+                android:layout_below="@+id/max"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
